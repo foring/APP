@@ -6,7 +6,7 @@ Page({
         motto: '这是第一个页面',
         userInfo: {
             avatarUrl: 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=141660177,2785183244&fm=58',
-            nickName: 'xx'
+            nickName: 'Marine'
         }
     },
     //事件处理函数
