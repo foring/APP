@@ -1,0 +1,20 @@
+﻿@import "mixin";
+/*alternate infinite linear forwards;
+@include prefix(animation, shou 1s infinite alternate linear);*/
+@-webkit-keyframes rotate {
+    0% {
+        @include prefix(transform, rotate(0deg));
+    }
+    100% {
+        @include prefix(transform, rotate(360deg));
+    }
+}
+
+@keyframes rotate {
+    0% {
+        @include prefix(transform, rotate(0deg));
+    }
+    100% {
+        @include prefix(transform, rotate(360deg));
+    }
+}

@@ -1,13 +1,27 @@
 //index.js
 //获取应用实例
 var app = getApp()
+var icons = [];
+var columns = 1;
+for (var i = 1; i <= 1200; i++) {
+    if (i > 1 && i % 12 == 1) {
+        icons.push(columns++ + '岁');
+    }
+    icons.push('');
+    if (i === 1200) {
+        icons.push(columns++ + '岁');
+    }
+
+}
 Page({
     data: {
         motto: '这是第一个页面',
         userInfo: {
             avatarUrl: 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=141660177,2785183244&fm=58',
             nickName: 'Marine'
-        }
+        },
+        icons: icons
+
     },
     //事件处理函数
     bindViewTap: function () {

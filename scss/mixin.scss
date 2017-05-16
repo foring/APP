@@ -1,0 +1,202 @@
+/* px -> rpx*/
+@mixin rpx($property, $values...) {
+    $max: length($values);
+    $result: '';
+    $results: '';
+    @for $i from 1 through $max {
+        $remValues: nth($values, $i)  * 2rpx;
+        //$value: nth($values, $i)* 1px;
+        $result: #{$result + " " +$remValues};
+        //$results: #{$results + " " +$value};
+    }
+    //#{$property}: $results;
+    #{$property}: $result;
+}
+
+
+@mixin prefix($property, $values...) {
+
+    $max: length($values);
+    $result: '';
+    @for $i from 1 through $max {
+        $result: #{$result + " " + nth($values, $i)};
+    }
+    //-webkit-#{$property}: $result;
+    //-moz-#{$property}: $result;
+    //-ms-#{$property}: $result;
+    #{$property}: $result;
+}
+
+@mixin size($width, $height) {
+    @include rpx(width, $width);
+    @include rpx(height, $height);
+}
+
+@mixin left($px) {
+    @include rpx(left, $px);
+}
+
+@mixin right($px) {
+    @include rem(right, $px);
+}
+
+@mixin top($px) {
+    @include rpx(top, $px);
+}
+
+@mixin bottom($px) {
+    @include rpx(bottom, $px);
+}
+
+@mixin pos($top, $left) {
+    @include rem(left, $left);
+    @include rem(top, $top);
+}
+
+@mixin pos2($top, $right) {
+    @include rpx(top, $top);
+    @include rpx(right, $right);
+}
+
+@mixin pos2($top, $right) {
+    @include rpx(top, $top);
+    @include rpx(right, $right);
+}
+
+@mixin pos3($bottom, $left) {
+    @include rpx(bottom, $bottom);
+    @include rpx(left, $left);
+}
+
+@mixin translate($x, $y) {
+    @include prefix(transform, translate($x, $y));
+}
+
+@mixin padding($values...) {
+    @include rpx(padding, $values...);
+}
+
+@mixin margin($values...) {
+    @include rpx(margin, $values...);
+}
+
+@mixin font-size($values...) {
+    @include rpx(font-size, $values...);
+}
+
+@mixin line-height($values...) {
+    @include rpx(line-height, $values...);
+}
+
+@mixin border-radius($values...) {
+    @include rpx(-webkit-border-radius, $values...);
+    @include rpx(border-radius, $values...);
+}
+
+@mixin background-position($values...) {
+    @include rpx(background-position, $values...);
+}
+
+@mixin background-position-x($values...) {
+    @include rpx(background-position-x, $values...);
+}
+
+@mixin background-position-y($values...) {
+    @include rpx(background-position-y, $values...);
+}
+
+@mixin background-size($values...) {
+    @include rpx(background-size, $values...);
+}
+
+@mixin margin-right($values) {
+    @include rpx(margin-right, $values);
+}
+
+@mixin margin-top($values) {
+    @include rpx(margin-top, $values);
+}
+
+@mixin margin-left($values) {
+    @include rpx(margin-left, $values);
+}
+
+@mixin margin-bottom($values) {
+    @include rpx(margin-bottom, $values);
+}
+
+@mixin padding-bottom($values) {
+    @include rpx(padding-bottom, $values);
+}
+
+@mixin padding-left($values) {
+    @include rpx(padding-left, $values);
+}
+
+@mixin padding-right($values) {
+    @include rpx(padding-right, $values);
+}
+
+@mixin padding-top($values) {
+    @include rpx(padding-top, $values);
+}
+
+@mixin min-width($values...) {
+    @include rpx(min-width, $values...);
+}
+
+@mixin min-height($values...) {
+    @include rpx(min-height, $values...);
+}
+
+@mixin width($values...) {
+    @include rpx(width, $values...);
+}
+
+@mixin height($values...) {
+    @include rpx(height, $values...);
+}
+
+@mixin max-height($values...) {
+    @include rpx(max-height, $values...);
+}
+
+@mixin min-height($values...) {
+    @include rpx(min-height, $values...);
+}
+
+@mixin max-width($values...) {
+    @include rpx(max-width, $values...);
+}
+
+@mixin border-width($values...) {
+    @include rpx(border-width, $values...);
+}
+
+@mixin border-top-width($values...) {
+    @include rpx(border-top-width, $values...);
+}
+
+@mixin border-left-width($values...) {
+    @include rpx(border-left-width, $values...);
+}
+
+@mixin border-right-width($values...) {
+    @include rpx(border-right-width, $values...);
+}
+
+@mixin border-bottom-width($values...) {
+    @include rpx(border-bottom-width, $values...);
+}
+
+@mixin min-width($values...) {
+    @include rpx(min-width, $values...);
+}
+
+@mixin translateX($x) {
+    @include prefix(transform, translateX($x));
+}
+
+@mixin translateY($y) {
+    @include prefix(transform, translateY($y));
+}

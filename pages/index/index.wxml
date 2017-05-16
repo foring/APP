@@ -1,4 +1,7 @@
 <!--index.wxml-->
+<template name="icon">
+  <text class="text">{{item}}</text>
+</template>
 <view class="container">
   <view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
@@ -7,5 +10,10 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
 
+  </view>
+  <view class="icon-block">
+    <block wx:for="{{icons}}">
+          <template is="icon" data="{{item}}"/>
+      </block>
   </view>
 </view>

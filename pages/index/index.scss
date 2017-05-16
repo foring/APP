@@ -1,20 +1,52 @@
-/**index.wxss**/
+/**index.scss**/
+@import "../../scss/mixin";
+
 .userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .userinfo-avatar {
-    width: 128rpx;
-    height: 128rpx;
-    margin: 20rpx;
-    border-radius: 50%;
-  }
-  .userinfo-nickname {
-    color: #aaa;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .userinfo-avatar {
+        @include width(64);
+        @include height(64);
+        @include margin(20);
+        border-radius: 50%;
+    }
+    .userinfo-nickname {
+        color: #aaa;
+    }
 }
+
 .usermotto {
-  margin-top: 200px;
+    margin-top: 200px;
+
+}
+
+.icon-block {
+    display: block;
+    border-top: 1px solid #ededed;
+    @include border-top-width(1);
+    .text {
+        float: left;
+        @include size(28, 28);
+        @include font-size(12);
+        border: 1px solid #ededed;
+        @include border-width(1);
+        border-top: none;
+        border-right: none;
+        text-align: center;
+        @include line-height(28);
+        overflow: hidden;
+        color: #666;
+        white-space: nowrap;
+        &:nth-child(13n) {
+            border-color: #fff;
+            border-left-color: #ededed;
+            border-right: 0;
+            color: #999;
+            @include width(34);
+            text-align: right;
+        }
+    }
 }
 
 
