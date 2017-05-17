@@ -1,0 +1,15 @@
+/* px -> rpx*/
+/*alternate infinite linear forwards;
+@include prefix(animation, shou 1s infinite alternate linear);*/
+@-webkit-keyframes rotate {
+  0% {
+    transform:  rotate(0deg); }
+  100% {
+    transform:  rotate(360deg); } }
+@keyframes rotate {
+  0% {
+    transform:  rotate(0deg); }
+  100% {
+    transform:  rotate(360deg); } }
+
+/*# sourceMappingURL=animate.wxss.map */

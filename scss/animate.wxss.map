@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;AAGA,yBAOC;EANG,EAAG;ICsBH,SAAY,EALG,aAAiC;EDdhD,IAAK;ICmBL,SAAY,EALG,eAAiC;ADTpD,iBAOC;EANG,EAAG;ICaH,SAAY,EALG,aAAiC;EDLhD,IAAK;ICUL,SAAY,EALG,eAAiC",
+"sources": ["animate.scss","mixin.scss"],
+"names": [],
+"file": "animate.wxss"
+}
