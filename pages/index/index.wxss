@@ -22,7 +22,7 @@
     color: #666;
     white-space: nowrap;
     position: relative; }
-    .icon-block .text.has {
+    .icon-block .text.has text {
       background: #999; }
     .icon-block .text text {
       overflow: hidden;

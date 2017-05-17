@@ -27,7 +27,9 @@
         white-space: nowrap;
         position: relative;
         &.has {
-            background: #999;
+          text{
+              background: #999;
+          }
         }
         text {
             overflow: hidden;
