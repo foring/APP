@@ -2,14 +2,14 @@
 //获取应用实例
 var app = getApp()
 var icons = [];
-var columns = 1;
+var columns = [];
 for (var i = 1; i <= 1200; i++) {
     if (i > 1 && i % 12 == 1) {
-        icons.push(columns++ + '岁');
+        columns.push(Math.floor(i / 12) + '岁');
     }
     icons.push('');
     if (i === 1200) {
-        icons.push(columns++ + '岁');
+        columns.push(Math.floor(i / 12) + '岁');
     }
 
 }
@@ -20,7 +20,8 @@ Page({
             avatarUrl: 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=141660177,2785183244&fm=58',
             nickName: 'Marine'
         },
-        icons: icons
+        icons: icons,
+        columns:columns
 
     },
     //事件处理函数

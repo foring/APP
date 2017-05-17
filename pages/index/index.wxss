@@ -12,33 +12,44 @@
   .userinfo .userinfo-nickname {
     color: #aaa; }
 
-.usermotto {
-  margin-top: 200px; }
-
 .icon-block {
   display: block;
-  border-top: 1px solid #ededed;
-  border-top-width:  2rpx; }
+  margin-top:  40rpx; }
   .icon-block .text {
-    float: left;
-    width:  56rpx;
-    height:  56rpx;
-    font-size:  24rpx;
-    border: 1px solid #ededed;
-    border-width:  2rpx;
-    border-top: none;
-    border-right: none;
+    display: inline-block;
+    vertical-align: middle;
     text-align: center;
-    line-height:  56rpx;
-    overflow: hidden;
     color: #666;
-    white-space: nowrap; }
-    .icon-block .text:nth-child(13n) {
-      border-color: #fff;
-      border-left-color: #ededed;
-      border-right: 0;
+    white-space: nowrap;
+    position: relative; }
+    .icon-block .text text {
+      overflow: hidden;
+      height:  54rpx;
+      line-height:  54rpx;
+      font-size:  24rpx;
+      border: 1px solid #ededed;
+      border-width:  1rpx;
+      border-top: none;
+      border-right: none;
+      width: 100%;
+      display: block; }
+  .icon-block .left-block {
+    float: left;
+    width: 10%; }
+    .icon-block .left-block .text {
       color: #999;
-      width:  68rpx;
-      text-align: right; }
+      width: 100%; }
+      .icon-block .left-block .text text {
+        border-color: #fff; }
+  .icon-block .right-block {
+    float: left;
+    width: 90%; }
+    .icon-block .right-block .block-wrap {
+      border: 1px solid #ededed;
+      border-width:  1rpx;
+      border-left: none;
+      border-bottom: none; }
+    .icon-block .right-block .text {
+      width: 8.3333%; }
 
 /*# sourceMappingURL=index.wxss.map */

@@ -1,19 +1,26 @@
 <!--index.wxml-->
 <template name="icon">
-  <text class="text">{{item}}</text>
+      <view class="text">
+        <text>{{item}}</text>
+      </view>
 </template>
 <view class="container">
   <view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}{{userInfo.aa}}</text>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-
-  </view>
   <view class="icon-block">
-    <block wx:for="{{icons}}">
-          <template is="icon" data="{{item}}"/>
-      </block>
+    <view   class="left-block">
+          <block wx:for="{{columns}}">
+                <template is="icon" data="{{item}}"/>
+          </block>
+    </view>
+      <view  class="right-block">
+        <view class="block-wrap">
+            <block wx:for="{{icons}}">
+                  <template is="icon" data="{{item}}"/>
+            </block>
+         </view>
+      </view>
   </view>
 </view>

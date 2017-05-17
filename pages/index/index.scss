@@ -16,37 +16,57 @@
     }
 }
 
-.usermotto {
-    margin-top: 200px;
-
-}
-
 .icon-block {
     display: block;
-    border-top: 1px solid #ededed;
-    @include border-top-width(1);
+    @include margin-top(20);
     .text {
-        float: left;
-        @include size(28, 28);
-        @include font-size(12);
-        border: 1px solid #ededed;
-        @include border-width(1);
-        border-top: none;
-        border-right: none;
+        display: inline-block;
+        vertical-align: middle;
         text-align: center;
-        @include line-height(28);
-        overflow: hidden;
         color: #666;
         white-space: nowrap;
-        &:nth-child(13n) {
-            border-color: #fff;
-            border-left-color: #ededed;
-            border-right: 0;
-            color: #999;
-            @include width(34);
-            text-align: right;
+
+        position: relative;
+
+        text {
+            overflow: hidden;
+            @include height(27);
+            @include line-height(27);
+            @include font-size(12);
+            border: 1px solid #ededed;
+            @include border-width(0.5);
+            border-top: none;
+            border-right: none;
+            width: 100%;
+            display: block;
         }
     }
+    .left-block {
+        float: left;
+        width: 10%;
+        .text {
+            color: #999;
+            width: 100%;
+            text {
+                border-color: #fff;
+            }
+        }
+
+    }
+    .right-block {
+        float: left;
+        width: 90%;
+        .block-wrap {
+            border: 1px solid #ededed;
+            @include border-width(0.5);
+            border-left: none;
+            border-bottom: none;
+        }
+        .text {
+            width: 8.3333%;
+        }
+    }
+
 }
 
 
