@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <template name="icon">
-      <view class="text">
-        <text>{{item}}</text>
+      <view class="text {{item.class}}">
+        <text>{{item.text}}</text>
       </view>
 </template>
 <view class="container">
@@ -12,13 +12,13 @@
   <view class="icon-block">
     <view   class="left-block">
           <block wx:for="{{columns}}">
-                <template is="icon" data="{{item}}"/>
+                <template is="icon" data="{{item,index}}"/>
           </block>
     </view>
       <view  class="right-block">
         <view class="block-wrap">
             <block wx:for="{{icons}}">
-                  <template is="icon" data="{{item}}"/>
+                  <template is="icon" data="{{item,index}}"/>
             </block>
          </view>
       </view>

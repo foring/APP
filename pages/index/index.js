@@ -3,13 +3,29 @@
 var app = getApp()
 var icons = [];
 var columns = [];
+var bornDate = new Date('1991-10-19');
+var nowDate = new Date();
 for (var i = 1; i <= 1200; i++) {
+    var year = Math.floor(i / 12);
     if (i > 1 && i % 12 == 1) {
-        columns.push(Math.floor(i / 12) + '岁');
+        columns.push({
+            text: year + '岁',
+            index: year
+        });
     }
-    icons.push('');
+    var className = '';
+    if ((nowDate.getFullYear() - bornDate.getFullYear()) >= year) {
+        className = 'has'
+    }
+    icons.push({
+        class: className,
+        index: i
+    });
     if (i === 1200) {
-        columns.push(Math.floor(i / 12) + '岁');
+        columns.push({
+            text: year + '岁',
+            index: year
+        });
     }
 
 }
@@ -21,7 +37,7 @@ Page({
             nickName: 'Marine'
         },
         icons: icons,
-        columns:columns
+        columns: columns
 
     },
     //事件处理函数

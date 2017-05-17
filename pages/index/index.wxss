@@ -22,6 +22,8 @@
     color: #666;
     white-space: nowrap;
     position: relative; }
+    .icon-block .text.has {
+      background: #999; }
     .icon-block .text text {
       overflow: hidden;
       height:  54rpx;
